@@ -16,7 +16,7 @@ const Theme = {
 };
 
 const startTheme = localStorage.getItem('siteTheme');
-body.classList.add(startTheme);
+localStorage.getItem('siteTheme') ? body.classList.add(startTheme) : '';
 
 if (startTheme == 'dark-theme') {
   switchButton.checked = true;
